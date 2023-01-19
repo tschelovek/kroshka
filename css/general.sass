@@ -19,6 +19,11 @@ a
   &_description
     font-size: 18px
     margin-bottom: 16px
+  &_h1
+    text-transform: uppercase
+    font-size: 64px
+    font-weight: 700
+    line-height: 1.3
   &_h2
     text-transform: uppercase
     font-size: 48px
@@ -34,10 +39,17 @@ a
     display: flex
     flex-flow: column
     align-items: center
+  &_color1
+    background-color: var(--bg-almost-white)
+    +border-radius(24px 24px 0 0)
+  &_color2
+    background-color: var(--bg-almost-white)
+    +border-radius(0 0 24px 24px)
 
 .btn
   border: none
   text-decoration: none
+  cursor: pointer
   &_round
     padding: 16px 30px 14px
     display: inline-block
@@ -46,19 +58,52 @@ a
     font-weight: 500
     line-height: 1
     text-decoration: none
+  &_sqr
+    padding: 12px 20px 12px
+    display: inline-block
+    +border-radius(5px)
+    font-size: 18px
+    font-weight: 500
+    line-height: 1
   &_white
     color: white
     border: 1px solid white
+    -webkit-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -moz-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -ms-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -o-transition: color 0.3s, border 0.3s, background-color 0.3s
+    transition: color 0.3s, border 0.3s, background-color 0.3s
+    &:hover
+      color: var(--bg-almost-white)
+      border: 1px solid var(--bg-almost-white)
   &_black
     color: black
     border: 1px solid black
+    -webkit-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -moz-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -ms-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -o-transition: color 0.3s, border 0.3s, background-color 0.3s
+    transition: color 0.3s, border 0.3s, background-color 0.3s
+    &:hover
+      background-color: var(--bg-almost-white)
   &_yellow
     color: white
     background-color: var(--yellow)
     border: 1px solid var(--yellow)
+    -webkit-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -moz-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -ms-transition: color 0.3s, border 0.3s, background-color 0.3s
+    -o-transition: color 0.3s, border 0.3s, background-color 0.3s
+    transition: color 0.3s, border 0.3s, background-color 0.3s
+    &:hover
+      background-color: var(--orange)
+      border: 1px solid var(--orange)
   &_yellow-transparent
     color: var(--yellow)
     border: 1px solid var(--yellow)
+  &_violet
+    color: white
+    background-color: var(--violet)
 
 
 //    &:focus
@@ -106,7 +151,6 @@ a
     +center
     +border-radius(50%)
     border: 1px solid white
-
 
 .violet
   color: var(--violet)

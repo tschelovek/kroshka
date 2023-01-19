@@ -1,0 +1,68 @@
+.modal--callback
+  max-width: 500px
+  width: 100%
+  padding: 30px
+  text-align: center
+  +box
+
+.modal
+  display: none
+  background: #F5F5F5
+  &__title
+    margin-bottom: 20px
+  &__btns
+    display: flex
+    flex-direction: column
+
+.callback
+  padding: 84px 0
+  background-size: cover
+  h3
+    font-size: 40px
+    font-weight: 800
+    line-height: 1.1
+    text-transform: uppercase
+  textarea
+    padding-bottom: 15px
+  &__input-wrapper
+    &:first-child
+      margin-right: 50px
+      width: 45%
+    &:nth-child(2)
+      width: calc(55% - 50px)
+    &:last-child
+      width: 100%
+  &__submit-wrapper
+    margin-top: 55px
+    display: flex
+    flex-direction: row
+    align-items: center
+  &__form
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+  &__add-file
+    margin-top: 30px
+  &__notice
+    margin-left: 50px
+    color: #ffffff
+
+.notice_checked
+  position: absolute
+  z-index: -1
+  opacity: 0
+  &+label
+    display: inline-flex
+    align-items: center
+    user-select: none
+    &::before
+      content: ''
+      display: flex
+      align-items: center
+      width: 14px
+      height: 14px
+      border: 1px solid var(--gray)
+      background: #ffffff
+      margin-right: 10px
+  &:checked+label::before
+    content: url("../images/check_wo_box.svg")

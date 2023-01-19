@@ -1,11 +1,9 @@
 :root {
-    /*--light-blue: #EAF2FD;*/
-    /*--blue: #2F80ED;*/
+    --bg-almost-white: #FCFCFC;
     --deep-blue: #1C005C;
-    /*--almost-black: #000F2E;*/
     --gray: #333333;
-    /*--light-gray: #9D9D9D;*/
+    --light-gray: #E0E0E0;
     --violet: #783BFF;
-    /*--green: #4BC937;*/
     --yellow: #FFA83B;
+    --orange: #FF8E00;
 }
