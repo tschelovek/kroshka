@@ -55,14 +55,21 @@
     display: inline-flex
     align-items: center
     user-select: none
-    &::before
-      content: ''
-      display: flex
-      align-items: center
-      width: 14px
-      height: 14px
-      border: 1px solid var(--gray)
-      background: #ffffff
-      margin-right: 10px
-  &:checked+label::before
-    content: url("../images/check_wo_box.svg")
+    .svg_check
+      visibility: hidden
+      fill: white
+      transition: visibility 0.3s, fill 0.4s ease-in-out
+  //  &::before
+  //    content: ''
+  //    display: flex
+  //    align-items: center
+  //    width: 14px
+  //    height: 14px
+  //    border: 1px solid var(--gray)
+  //    background: #ffffff
+  //    margin-right: 10px
+  //&:checked+label::before
+  //  content: url("../images/check_wo_box.svg")
+  &:checked+label .svg_check
+    visibility: unset
+    fill: #333333

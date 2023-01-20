@@ -1,4 +1,5 @@
 .hero
+  padding-bottom: 100px
   background: url("../images/s_line.png") bottom 150px center no-repeat
   &__text
     padding: 30px
@@ -11,69 +12,177 @@
   &__img-wrapper
     padding-bottom: 80px
     display: flex
-    #scene
-      margin: -60px -20px 0
-    #scene2
-      margin-top: -160px
+    justify-content: space-between
+    img
+      max-width: 100%
+  &__img-block
+    position: relative
+  #scene1
+    margin: -60px -20px 0 0
+  #scene2
+    position: absolute
+    bottom: -42px
+    right: -100px
+  #scene5
+    margin-top: -100px
+  #scene6
+    position: absolute
+    bottom: 52px
+    right: 80px
   .title_h1
     color: var(--orange)
     max-width: 1000px
 
 .program
   background: url("../images/bg_yellow_pattern.jpg")
+  overflow: visible
   &__text
     padding: 40px 0 30px 200px
-    max-width: 760px
+    max-width: 870px
     p
       margin-bottom: 30px
       color: white
       font-size: 32px
       line-height: 1.5
-  &__cards
+  .container
     position: relative
+  &__cards
     &__img-wrapper
       position: absolute
-      bottom: 0
-      right: 10%
+      z-index: 30
+      -webkit-transition: opacity 0.6s
+      -moz-transition: opacity 0.6s
+      -ms-transition: opacity 0.6s
+      -o-transition: opacity 0.6s
+      transition: opacity 0.6s
+      &_1
+        right: 136px
+        bottom: 86px
+        -webkit-transition: transform 0.2s ease-in-out
+        -moz-transition: transform 0.2s ease-in-out
+        -ms-transition: transform 0.2s ease-in-out
+        -o-transition: transform 0.2s ease-in-out
+        transition: transform 0.2s ease-in-out
+        &:hover
+          transform: translate(-40px, -60px)
+        &:hover ~ .program__cards__img-wrapper_2
+          opacity: 0.3
+        &:hover ~ .program__cards__img-wrapper_3
+          opacity: 0.2
+      &_2
+        right: 188px
+        bottom: -26px
+        pointer-events: none
+      &_3
+        right: 8px
+        top: -24px
+        pointer-events: none
+      img
+        max-width: 100%
 
 .about
-  padding: 120px 0
+  padding: 120px 0 0
   position: relative
-  background-color: var(--bg-almost-white)
-  &__star-trek
-    position: absolute
-    left: 0
-    bottom: 0
-    z-index: 15
-    pointer-events: none
-    &::before
-      content: url("../images/s_line_3_2.png")
+  background: var(--bg-almost-white) url("../images/s_line_3_4.png") top left no-repeat
+  background-size: contain
+  z-index: 5
+  //&__star-trek
+  //  position: absolute
+  //  left: 0
+  //  bottom: 0
+  //  z-index: 15
+  //  pointer-events: none
+  //  &::before
+  //    content: url("../images/s_line_3_3.png")
+  &__divider
+    background-color: var(--bg-almost-white)
+    height: 120px
   &__content
     margin: 80px 10px 0
     .wrapper_btn
       margin-top: 98px
+      .btn_yellow
+        position: relative
+        z-index: 30
   &__list
-    display: flex
+    //display: flex
+    display: grid
     gap: 20px
-    flex-flow: wrap
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: 1fr 1fr
+    //flex-flow: wrap
   &__item
+    //min-width: 360px
     padding: 70px 16px 20px 20px
+    position: relative
     display: flex
     flex-flow: column
     justify-content: space-between
     flex: 1
-    min-width: 360px
     background-color: white
     border-radius: 24px
-    &:first-child
-      flex: 2.17
-      min-width: 460px
+    z-index: 10
+    &_2
+      z-index: 30
+      &::before
+        content: ''
+        position: absolute
+        top: 36px
+        left: 70px
+        right: 20px
+        height: 1px
+        background-color: var(--purple)
+      &::after
+        content: url("../images/about__item_2.png")
+        position: absolute
+        bottom: -30px
+        right: -68px
+    &_3
+      z-index: 15
+      &::after
+        content: url("../images/about__item_3.png")
+        position: absolute
+        bottom: -100px
+        right: -48px
+    &_5
+      z-index: 15
+      &::after
+        content: url("../images/about__item_5.png")
+        position: absolute
+        bottom: -130px
+        right: -68px
+
+    &_big
+      //flex: 2.17
+      //min-width: 460px
+      grid-column: 1/3
     p
       margin-top: 10px
+      position: relative
       font-size: 20px
       line-height: 1.6
+      z-index: 50
     &__text-wrapper
       margin-bottom: 30px
+    &__counter
+      position: absolute
+      top: 20px
+      left: 20px
+      +center
+      width: 30px
+      height: 30px
+      font-size: 14px
+      +border-radius(50%)
+      &_purple
+        color: var(--violet)
+        background-color: var(--purple)
+      &_orange
+        color: #FFA83B
+        background-color: #FFF3E3
+      &_carmine
+        color: #FF0535
+        background-color: #FFEDF0
+
     .btn_black
       position: relative
       background-color: white
@@ -105,7 +214,7 @@
     top: -130px
     z-index: 20
     img
-      z-index: 20
+      max-width: 100%
   &__star-trek
     position: absolute
     right: 0
@@ -157,6 +266,9 @@
     align-items: center
     background-color: white
     +border-radius(24px)
+    &:hover .benefits__item__image-wrapper
+      -webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
+      animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both
     &__image-wrapper
       margin-right: 20px
       display: flex
@@ -200,6 +312,11 @@
         line-height: 1.5
     &__img-wrapper
       margin-left: 80px
+    &__link-wrapper
+      display: flex
+      gap: 10px
+      .btn
+        white-space: nowrap
   .title_h2
     max-width: 860px
 
@@ -235,15 +352,35 @@
       &__controls
         margin: 20px 0 12px
         display: flex
+        gap: 8px
         width: 100%
         height: 51px
         input, button
           height: inherit
     &__policy
       height: 20px
+      &__link
+        margin-left: 4px
+        padding: 4px 0
+        display: inline-block
+        position: relative
+        color: black
+        cursor: pointer
+        transition: color 0.3s
+        &::after
+          content: ''
+          position: absolute
+          height: 1px
+          width: 100%
+          bottom: 2px
+          left: 0
+          background-color: black
+        &:hover
+          color: var(--violet)
+      svg
+        margin-right: 8px
     &-input
       padding: 16px 22px
-      margin-right: 8px
       flex: 2
       font-size: 18px
       background-color: white

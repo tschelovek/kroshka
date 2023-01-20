@@ -1,13 +1,45 @@
-@media only screen and (max-width: 360px)
-
-@media only screen and (max-width: 768px)
-  .books
-    &__list
-      flex-flow: wrap
-
+@media only screen and (max-width: 1324px)
+  .program
+    &__text
+      padding: 40px 0 30px 56px
+      max-width: 600px
+      p
+        font-size: 28px
 
 @media only screen and (max-width: 1024px)
+  .title
+    &_h1
+      font-size: 52px
+
+  .hero
+    padding-bottom: 0
+    background: white
+    &__img-wrapper
+      justify-content: space-around
+    &__img-block
+      &_1
+        max-width: 340px
+      &_2
+        max-width: 280px
+    #scene1
+      margin: 0
+
+  .program
+    &__text
+      padding: 30px 0 30px 36px
+      max-width: 420px
+      p
+        font-size: 24px
+
+  .about
+    &__list
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(3, 1fr)
+    &__item_2::after
+      opacity: 0.5
+
   .author
+    padding: 80px 0
     &__content
       margin: 24px 20px 0 20px
     &__image-wrapper
@@ -16,5 +48,169 @@
       #scene3
         display: none
 
+  .questions, .benefits, .contacts
+    padding: 80px 0
+
+  .contacts
+    &__info p
+      font-size: 28px
+    &__content__half
+      padding: 40px 32px
+
+@media only screen and (max-width: 864px)
+  .program
+    &__cards__img-wrapper
+      &_1
+        bottom: 140px
+      &_2
+        right: 104px
+      &_3
+        top: -42px
+
+  .books
+    &__list
+      flex-flow: wrap
+      justify-content: space-around
+
+  .author
+    &__content
+      p
+        font-size: 18px
+
+  .contacts
+    &__content
+      flex-flow: column
+    &__info
+      p
+        margin-left: auto
+        text-align: right
+        color: black
+    .form_contacts
+      &__text
+        text-align: center
+
+@media only screen and (max-width: 768px)
+  .title
+    &_h1
+      font-size: 48px
+    &_h2
+      font-size: 42px
+
+  .program
+    &__cards__img-wrapper
+      &_1
+        width: 118px
+        right: 40px
+        bottom: 112px
+      &_2
+        width: 128px
+        right: 20px
+        bottom: 0
+      &_3
+        width: 152px
+        top: 12px
+    &__text
+      margin-right: 160px
+      max-width: unset
+      p
+        font-size: 22px
+
+  .about
+    &__list
+      grid-template-columns: 1fr
+      grid-template-rows: unset
+    &__item_big
+      grid-column: unset
+
+  .author
+    &__content
+      p
+        margin: 10px 0
+        text-align: center
+    &__image-wrapper
+      position: unset
+      display: flex
+      justify-content: center
+
+  .books
+    &__list
+      flex-flow: wrap
+
+
+@media only screen and (max-width: 640px)
+  .title_h1
+    font-size: 40px
+
+  .program
+    &__text
+      padding-left: 20px
+
+  .contacts
+    &__content
+      &__half
+        padding: 40px 16px
+
+@media only screen and (max-width: 480px)
+  .title
+    &_h1
+      font-size: 36px
+    &_h2
+      font-size: 32px
+    &_h3
+      font-size: 22px
+
+  .hero
+    &__text
+      padding: 30px 0
+
+  .program
+    &__text
+      padding-left: 18px
+
+  .about
+    &__item
+      p
+        font-size: 18px
+        text-align: justify
+
+  .books
+    &__content__text
+      margin: 24px 0 0
+      p
+        text-align: justify
+
   .benefits
-    padding: 60px 0
+    &__list
+      flex-flow: column
+    &__item
+      padding: 20px
+      min-height: 120px
+      &__text
+        width: unset
+
+  .contacts
+    &__content
+      &__half
+        padding: 40px 16px
+    &__info
+      p
+        font-size: 24px
+    .form
+      &_contacts
+        &__controls
+          flex-flow: column
+          height: unset
+      &__policy
+        text-align: center
+  .notice_checked + label
+    display: inline-block
+
+  .footer
+    &__top
+      flex-flow: column
+    &__logo
+      margin: 0
+
+@media only screen and (max-width: 360px)
+  .books__content__text p
+    font-size: 16px
