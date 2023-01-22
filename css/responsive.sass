@@ -6,6 +6,12 @@
       p
         font-size: 28px
 
+  .author
+    &__image-wrapper
+      right: 16px
+    &__star-trek
+      opacity: 0.6
+
 @media only screen and (max-width: 1024px)
   .title
     &_h1
@@ -35,8 +41,18 @@
     &__list
       grid-template-columns: repeat(2, 1fr)
       grid-template-rows: repeat(3, 1fr)
-    &__item_2::after
-      opacity: 0.5
+    &__item
+      &_2::after
+        opacity: 0.4
+        right: 12px
+      &_3::after
+        opacity: 0.2
+        bottom: -22px
+        right: 24px
+      &_5::after
+        opacity: 0.4
+        bottom: -20px
+        right: -12px
 
   .author
     padding: 80px 0
@@ -96,6 +112,42 @@
     &_h2
       font-size: 42px
 
+  .header
+    &__btn__burger
+      display: flex
+    &__burger
+      margin-top: -280px
+      flex-flow: column
+      gap: 20px
+      background-color: var(--bg-almost-white)
+      transition: transform 0.5s ease-in-out, visibility 0.5s ease-in
+      visibility: hidden
+      z-index: 20
+      &.active
+        transform: translateY(100%)
+        visibility: unset
+        transition: transform 0.5s ease-in-out, visibility 0.5s ease-out
+    &__sm__list
+      margin: 0 auto
+      position: static
+    &__bottom__list
+      flex-flow: column
+      text-align: center
+
+  .hero
+    #scene2
+      position: unset
+      width: 200px
+    #scene5
+      margin-top: 0
+    #scene6
+      position: unset
+      bottom: 0
+      right: 0
+      width: 200px
+    &__img-block
+      &_1
+        max-width: 280px
   .program
     &__cards__img-wrapper
       &_1
@@ -121,12 +173,17 @@
       grid-template-rows: unset
     &__item_big
       grid-column: unset
+    &__content
+      .wrapper_btn
+        margin-top: 36px
+    &__divider
+      height: 60px
 
   .author
     &__content
       p
         margin: 10px 0
-        text-align: center
+        text-align: justify
     &__image-wrapper
       position: unset
       display: flex
@@ -136,10 +193,30 @@
     &__list
       flex-flow: wrap
 
+  .questions
+    &__item
+      flex-flow: column
+      &:first-child .questions__item__img-wrapper
+        margin-left: unset
+      &:nth-child(3) .questions__item__img-wrapper img
+        margin: -80px 0
+      img
+        max-width: 100%
+
 
 @media only screen and (max-width: 640px)
   .title_h1
     font-size: 40px
+
+  .header
+    &__top__block
+      &_menu
+        order: 1
+      &_callback
+        order: 2
+        flex: 3
+      &_logo
+        flex: 100%
 
   .program
     &__text
@@ -165,13 +242,37 @@
 
   .program
     &__text
-      padding-left: 18px
+      margin-right: 60px
+      padding-left: 8px
+      p
+        font-size: 20px
+    &__cards__img-wrapper
+      &_1
+        width: 96px
+        top: 8px
+        right: -20px
+      &_2
+        width: 88px
+        right: 10px
+        bottom: 8px
+      &_3
+        width: 108px
+        top: 12px
+        right: -30px
+
 
   .about
+    &__content
+      margin: 80px 0 0
     &__item
       p
         font-size: 18px
         text-align: justify
+
+  .author
+    &__content
+      margin: 24px 8px 0 8px
+      padding: 36px 16px
 
   .books
     &__content__text
@@ -188,6 +289,10 @@
       &__text
         width: unset
 
+  .questions
+    &__item
+      &__text p
+        text-align: justify
   .contacts
     &__content
       &__half
@@ -212,5 +317,19 @@
       margin: 0
 
 @media only screen and (max-width: 360px)
+  .program__text
+    &__cards__img-wrapper_1
+      top: 92px
+    p
+      font-size: 18px
+
+  .about__item
+    padding: 70px 10px 20px 10px
   .books__content__text p
     font-size: 16px
+
+  .questions
+    &__item
+      &__text
+        padding: 8px 16px
+

@@ -3,10 +3,16 @@
   background-color: white
   &__top
     padding: 12px 20px 8px
+    position: relative
     display: flex
     justify-content: space-between
     align-items: center
+    flex-flow: wrap
     border-bottom: 1px solid var(--light-gray)
+    z-index: 30
+    &__block
+      display: flex
+      flex: 1
   &__bottom
     padding: 16px 0
     display: flex
@@ -21,3 +27,15 @@
       display: inline-block
       color: black
       cursor: pointer
+  &__sm__list
+    position: absolute
+    top: 24px
+    left: 20px
+  &__btn__burger
+    display: none
+  &__callback-link
+    margin-left: auto
+  .logo_header
+    margin: 0 auto
+  .wrapper_color1
+    position: relative

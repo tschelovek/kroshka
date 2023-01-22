@@ -28,7 +28,23 @@
         <div class="container_1200">
             <div class="wrapper_color1">
                 <div class="header__top">
-                    <ul class="sm__list sm__list_header">
+                    <div class="header__top__block header__top__block_menu">
+                        <button type="button" id="burgerButton" class="btn__burger header__btn__burger">
+                            <span>menu</span>
+                        </button>
+                    </div>
+                    <div class="header__top__block header__logo header__top__block_logo">
+                        <div class="logo logo_header">
+                            <img src="./images/logo.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="header__top__block header__top__block_callback">
+                        <a href="#callback-modal" class="btn_yellow-transparent btn_round header__callback-link" data-fancybox-modal>Связаться с
+                            нами</a>
+                    </div>
+                </div>
+                <div class="header__bottom header__burger" id="burgerMenu">
+                    <ul class="header__sm__list sm__list sm__list_header">
                         <li class="sm__item">
                             <a href="#" class="sm__link">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
@@ -62,13 +78,6 @@
                             </a>
                         </li>
                     </ul>
-                    <div class="logo logo_header">
-                        <img src="./images/logo.png" alt=""/>
-                    </div>
-                    <a href="#callback-modal" class="btn_yellow-transparent btn_round" data-fancybox-modal>Связаться с
-                        нами</a>
-                </div>
-                <div class="header__bottom">
                     <ul class="header__bottom__list">
                         <li class="header__bottom__item">
                             <a href="#" class="header__bottom__link">Программа РКИ для детей</a>
@@ -241,7 +250,6 @@
     <div class="about__divider"></div>
 
     <section class="author">
-        <div class="author__star-trek"></div>
         <div class="container">
             <div class="title wrapper_center">
                 <div class="title_description">Об авторе</div>
@@ -257,19 +265,21 @@
                     Увлекается
                     методом полного физического реагирования в преподавании иностранных языков детям. Мама 5
                     детей.</p>
-                <div class="author__image-wrapper">
-                    <div id="scene3">
-                        <div data-depth="0.6">
-                            <img src="./images/author_small.png" alt="">
-                        </div>
+            </div>
+            <div class="author__star-trek"></div>
+            <div class="author__image-wrapper">
+                <div id="scene3">
+                    <div data-depth="0.6">
+                        <img src="./images/author_small.png" alt="">
                     </div>
-                    <div id="scene4">
-                        <div data-depth="0.4">
-                            <img src="./images/author_big.png" alt="">
-                        </div>
+                </div>
+                <div id="scene4">
+                    <div data-depth="0.4">
+                        <img src="./images/author_big.png" alt="">
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
